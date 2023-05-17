@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio José Mujica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+    <script src="https://kit.fontawesome.com/056ee844d8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Barra De Navegación -->
+    <header class="header">
+        <nav class="navegacion-principal contenedor contenido-header">
+          <div class="navbar">
+            <a href="index.html"><h1>Mi Portafolio</h1></a>
+            <button class="ham"><i class="fa-solid fa-bars"></i></button>
+          </div>
+          <ul class="menu">
+            <li><a href="index.html">Volver al Inicio</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <!-- Overlay y Video -->
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>José A. Mujica N.</h2>
+                <div class="icono">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="11" r="3" />
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                      </svg>
+                    <p>Bogotá, Colombia</p>
+                </div>
+                <a class="boton-cont" href="contacto.html">Contactar</a>
+            </div>
+        </div>
+        <video autoplay muted loop>
+            <source src="video/programacion.mp4" type="video/mp4">
+            <source src="video/programacion.ogg" type="video/ogg">
+            <source src="video/programacion.webm" type="video/webm">
+        </video>
+    </div>
+
+    <!-- Contacto -->
+    <main class="contenedor form">
+        <h3 class="centrar-texto">Contacto</h3>
+        <div class="contacto-bg"></div>
+        <form id="form" class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre</label>
+                <input 
+                    class="campo__field"
+                    type="text"
+                    name="nombre" 
+                    placeholder="Tu Nombre" 
+                    id="nombre"
+                >
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="email">E-mail</label>
+                <input 
+                    class="campo__field"
+                    type="email"
+                    name="email" 
+                    placeholder="Tu E-mail" 
+                    id="email"
+                >
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje</label>
+                <textarea 
+                    class="campo__field campo__field--textarea"
+                    name="mensaje"
+                    id="mensaje"
+                ></textarea>
+            </div>
+            <div class="campo centrar">
+                <input type="submit" value="Enviar" id="button" class="boton-cont">
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Todos Los Derechos Reservados. José Mujica.</p>
+        <div class="iconos-footer">
+            <a href="https://github.com/josemujica00">
+                <picture>
+                    <source class="icon" srcset="build/img/github.avif" type="image/avif">
+                    <source class="icon" srcset="build/img/github.webp" type="image/webp">
+                    <img class="icon" loading="lazy" width="200" height="200" src="build/img/github.png" alt="github">
+                </picture>
+            </a>
+            <a href="https://linkedin.com/in/jose-angel-mujica-naranjo-38321a17b/">
+                <picture>
+                    <source class="icon" srcset="build/img/linkedin.avif" type="image/avif">
+                    <source class="icon" srcset="build/img/linkedin.webp" type="image/webp">
+                    <img class="icon" loading="lazy" width="200" height="200" src="build/img/linkedin.png" alt="linkedin">
+                </picture>
+            </a>
+        </div>
+    </footer>
+
+    <script src="build/js/contacto.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('zR0JhaUt2eajJGC3S')
+    </script>
+</body>
+</html>
